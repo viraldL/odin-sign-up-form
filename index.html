@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <svg class="svg1" width="384" height="456" transform='rotate(90)' viewBox="0 0 384 456" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="vector">
+        <path d="M304.232 304C304.232 387.947 236.127 456 152.116 456C68.1046 456 0 387.947 0 304C0 220.053 68.1046 152 152.116 152C236.127 152 304.232 220.053 304.232 304Z" fill="#D9D9D9" fill-opacity="0.5"/>
+        <path d="M384 152C384 235.947 315.895 304 231.884 304C147.873 304 79.7681 235.947 79.7681 152C79.7681 68.0527 147.873 0 231.884 0C315.895 0 384 68.0527 384 152Z" fill="#D9D9D9" fill-opacity="0.5"/>
+        </g>
+        </svg>
+
+        <svg class="svg2" width="384" height="456"  viewBox="0 0 384 456" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="vector">
+            <path d="M304.232 304C304.232 387.947 236.127 456 152.116 456C68.1046 456 0 387.947 0 304C0 220.053 68.1046 152 152.116 152C236.127 152 304.232 220.053 304.232 304Z" fill="#D9D9D9" fill-opacity="0.5"/>
+            <path d="M384 152C384 235.947 315.895 304 231.884 304C147.873 304 79.7681 235.947 79.7681 152C79.7681 68.0527 147.873 0 231.884 0C315.895 0 384 68.0527 384 152Z" fill="#D9D9D9" fill-opacity="0.5"/>
+            </g>
+            </svg>
     <div class="left-side">
         <div class="header">
             <img src="odin-lined.png" alt="odin logo">
@@ -19,42 +32,43 @@
         <div class="content-box">
             <p>This is not a real online service!<br>
             We know how to make your life faster..<br>
-            And we <em>know</em> you want it.</p>
+            Sign up <em>now</em> to get started!</p>
 
-            <p>Sign up <em>now</em> to get started!</p>
+            <p>You <em>know</em> you want to.</p>
         </div>
 
         <div class="form-box">
             <form id="myForm" method="GET" action="form.html">
+                <legend>Let's do this!</legend>
                 <div class="field">
                     <label for="name">FIRST NAME</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" maxlength="30">
                 </div>
                 <div class="field">
                     <label for="surname">LAST NAME</label>
-                    <input type="text" id="surname">
+                    <input type="text" id="surname" maxlength="30">
                 </div>
                 <div class="field">
                     <label for="email">EMAIL</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" maxlength="30">
                 </div>
                 <div class="field">
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="tel" id="phone">
+                    <input type="tel" id="phone" maxlength="30">
                 </div>
                 <div class="field">
                     <label for="pass">PASSWORD</label>
-                    <input type="password" id="pass">
+                    <input type="password" id="pass" minlength="5">
                 </div>
                 <div class="field">
                     <label for="repPass">CONFIRM PASSWORD</label>
-                    <input type="password" id="repPass">
+                    <input type="password" id="repPass" minlength="5">
                 </div>
             </form>
         </div>
 
         <div class="content-box2">
-            <input type="submit" form="myForm">
+            <input type="submit" form="myForm" value="Create Account">
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>

@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Open+Sans:wght@300;400;600;700&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(248, 248, 248);
+    overflow: hidden;
 }
 
 .left-side{
@@ -67,9 +73,43 @@ body {
     flex-direction: column;
     justify-content: end;
     width: 100%;
-    height: calc(75% / 2);
+    height: calc(70% / 2);
     font-size: 1.1rem;
 }
+
+.content-box2 {
+    width: 100%;
+    height: calc(70% / 2);
+    font-size: 1.1rem;
+}
+
+.content-box2 input {
+    font-size: 1.1rem;
+    border: none;
+    margin: 30px;
+    background-color: #84847c;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.content-box2 input:hover{
+    transform: scale(1.03);
+}
+
+.content-box2 p {
+    font-size: 0.8em;
+    margin-left: 30px;
+}
+
+.content-box2 p a {
+    text-decoration: none;
+    color: #84847c;
+    font-weight: 700;
+} 
 
 .content-box p {
     font-weight: 600;
@@ -79,9 +119,116 @@ body {
 }
 
 .form-box {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+.form-box form {
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
     width: 100%;
-    height: 25%;
+    height: 100%;
+    padding: 20px 0 20px 30px;
+    gap: 20px;
 }
 
+.form-box form legend {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.form-box form .field {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+}
+
+.form-box form .field label {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #84847c;
+}
+
+.form-box form .field input {
+    appearance: none;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.form-box form .field input:focus {
+    outline: 2px solid #3a65dc;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box form .field input:invalid {
+    outline: 2px solid #dc3a3a;
+    border: none;
+}
+
+.svg1 {
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 300;
+    height: 300;
+    z-index: -1;
+}
+
+.svg2 {
+    position: absolute;
+    bottom: -210px;
+    right: -200px;
+    width: 300;
+    height: 300;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 900px) {
+    body {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .left-side {
+        width: 100%;
+        height: 40%;
+    }
+    .right-side {
+        width: 100%;
+        height: 60%;
+    }
+
+    .header {
+        top: 100px;
+    }
+
+    .content-box, .content-box2 {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form-box form {
+        display: block;
+        height: fit-content;
+    }
+
+    .form-box {
+        height: fit-content;
+    }
+
+    .form-box form .field {
+        margin: 10px 0;
+    }
+}
